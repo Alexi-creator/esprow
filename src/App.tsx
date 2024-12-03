@@ -1,15 +1,19 @@
 import React from 'react';
 
+import jsonData from '@stubs/generated.json';
+
 import { EditableList } from '@components';
 
 import './styles.scss';
-import style from './App.module.scss';
+import styles from './App.module.scss';
 
 export const App = () => {
 	return (
-		<>
-			<h1 className={style.title}>ESPROW</h1>
-			<EditableList />
-		</>
+		<main>
+			<h1 className={styles.title}>ESPROW</h1>
+			<section>
+				<EditableList list={jsonData} />
+			</section>
+		</main>
 	);
 };
